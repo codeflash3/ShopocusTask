@@ -64,8 +64,20 @@ const authUser = asyncHandler(async (req, res) => {
       token: generateToken(user._id),
     });
   } else {
-    res.status(401).json({msg : "Invalid password"});
+    res.status(401).json({ msg: "Invalid password" });
+  }
+});
+//@desc Get logedIn user profile
+//@route GET /api/users/profile
+//@access Private
+const getProfile = asyncHandler(async (req, res) => {
+  const { id } = req.user;
+  try {
+    const user = await User.findById(id);
+    res.send(user);
+  } catch (error) {
+    res.status(400).send(error);
   }
 });
 
-export { registerUser, authUser };
+export { registerUser, authUser, getProfile };
