@@ -1,7 +1,8 @@
-# ShopocusTask
+# ShopocusTask  
+https://shopocus616-api.herokuapp.com/  
 Shopocus Login, SignIn, getProfile API Routes
 
-User Model consists of fields :   
+User Model consists of fields and constraints:   
 Name - String required  
 Email - String required along with isEmail validator and custom error message  
 Password - String required with minimun 6 characters constraint  
