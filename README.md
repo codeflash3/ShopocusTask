@@ -1,6 +1,9 @@
 # ShopocusTask  
 https://shopocus616-api.herokuapp.com/  
-Shopocus Login, SignIn, getProfile API Routes
+Shopocus Login, SignIn, getProfile API Routes  
+Command to run - npm run server  
+
+
 
 User Model consists of fields and constraints:   
 Name - String required  
